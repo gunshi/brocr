@@ -1,5 +1,8 @@
 #!/usr/local/bin/python
 # encoding: UTF-8
+from sympy import *      
+import math
+
 
 temp = []
 decimal=[0,1,2,3,4,5,6,7,8,9]
@@ -87,7 +90,22 @@ def dothings(text):
     bar=postfixeval(foo)
     return bar
 
+def det(list):
+    H=[]
+    for row in list:
+        H.append(row) 
+    a=Matrix(H)       ## pass as Matrix itself????
+    return a.det()
 
+def getadj(Matrix m):  #get adjoint of matrix
+    return m.adjugate()
+
+def getinv():  #get inverse of matrix   ,  Matrix m,mode='Gauss'
+    H=[]
+    for row in list:
+        H.append(row) 
+    a=Matrix(H)       
+    return a.inv()
 
 
 
